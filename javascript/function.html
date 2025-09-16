@@ -10,17 +10,35 @@
         }
     </style>
 </head>
-<body>
-    <div id="dip">
+<body id="dipp">
+    <button onclick="red()">RED</button>
+    <button onclick="green()">GREEN</button>
+    <button onclick="blue()">BLUE</button>
+    <!-- <div id="dip">
         <button onclick="dipti()">Click Here</button>
         <p id="dd"></p>
-        <!--Click Event or Event Handling-->
-    </div>
+        Click Event or Event Handling-->
+    <!-- </div>  -->
     <script>
-        function dipti()
+        function red()
         {
-            document.getElementById("dd").innerHTML="<h1> Hello </h1>"
+            document.getElementById("dipp").style.background="red"
         }
+        function green()
+        {
+            document.getElementById("dipp").style.background="green"
+        }
+        function blue()
+        {
+            document.getElementById("dipp").style.background="blue"
+        }
+
+
+
+        // function dipti()
+        // {
+        //     document.getElementById("dd").innerHTML="<h1> Hello </h1>"
+        // }
         
         // <!-- function abes()
         // {
