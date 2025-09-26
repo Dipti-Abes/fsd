@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <style>
-        #assign{
+        #image{
             height: 400px;
+            width: 400px;
+            background-color: lavenderblush;
+        }
+        #assign{
+            height: 300px;
             width: 400px;
             background-color: rgb(182, 182, 244);
         }
@@ -11,45 +16,61 @@
 </head>
 <body>
     <div id="image">
-        
+        <img src="pic1.avif" alt="" height="300px" width="400px">
+        <button onclick="hide()">HIDE</button>
     </div>
-    <!-- <div id="assign">
+    <div id="assign">
         
         <center><img src="steven-kuo-hi-res-tapcount-icon.jpg" alt="" height="50px" width="50px"><h2>Counter App</h2></center><br>
         <center>
         <p id="zero">0</p>
         <button onclick="inc()">+</button>
         <button onclick="dec()">-</button></center>
-    </div> -->
+    </div>
+    <div id="imagee">
+        <img src="pic2.avif" alt="" height="300px" width="400px">
+        <button onclick="changeImage()">CHANGE</button>
+    </div>
     <script>
+        function hide()
+        {
+            document.getElementById("image").style.display = "none";
+        }
+        function changeImage() {
+      let img = document.getElementById("myImage");
+      if (img.src.includes("0000FF")) {
+        img.src = "pic2.avif";
+      } else {
+        img.src = "https://via.placeholder.com/150/0000FF/FFFFFF?text=First";
+      }
+    }
 
 
 
 
-
-        // var c=0;
-        // var max=10;
-        // var min=0;
-        // function inc()
-        // {
-        //     if(c<max){
-        //         c++;
-        //         document.getElementById("zero").innerHTML=c;
-        //     }else{
-        //         alert("Maximum Limit")
-        //     }
+       var c=0;
+        var max=10;
+        var min=0;
+        function inc()
+        {
+            if(c<max){
+                c++;
+                document.getElementById("zero").innerHTML=c;
+            }else{
+                alert("Maximum Limit")
+            }
             
-        // }
-        // function dec()
-        // {
-        //     if(c>0){
-        //         c--;
-        //         document.getElementById("zero").innerHTML=c;
-        //     } else{
-        //         alert("Minimum Limit")
-        //     }
+        }
+        function dec()
+        {
+            if(c>0){
+                c--;
+                document.getElementById("zero").innerHTML=c;
+            } else{
+                alert("Minimum Limit")
+            }
             
-        // }
+        } 
         
     </script>
 </body>
